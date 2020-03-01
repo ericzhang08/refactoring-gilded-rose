@@ -34,19 +34,16 @@ public class Item {
     void updatePrice() {
         updateFirstStep();
         updateSecondStep();
-
         if (expirationDate < 0) {
             updateThirdStep();
         }
     }
 
     public void updateThirdStep() {
-
         if (price > 0) {
             if (!isSulfuras()) {
                 price = price - 1;
             }
-
         }
 
     }
