@@ -9,10 +9,10 @@ class GildedRose {
 
     public void update_quality() {
         for (int i = 0; i < items.length; i++) {
-            if (!items[i].name.equals("Aged Brie")
-                    && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            if (!items[i].isTargetName("Aged Brie")
+                    && !items[i].isTargetName("Backstage passes to a TAFKAL80ETC concert")) {
                 if (items[i].price > 0) {
-                    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+                    if (!items[i].isTargetName("Sulfuras, Hand of Ragnaros")) {
                         items[i].price = items[i].price - 1;
                     }
                 }
@@ -20,7 +20,7 @@ class GildedRose {
                 if (items[i].price < 50) {
                     items[i].price = items[i].price + 1;
 
-                    if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+                    if (items[i].isTargetName("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items[i].expirationDate < 11) {
                             if (items[i].price < 50) {
                                 items[i].price = items[i].price + 1;
@@ -36,15 +36,15 @@ class GildedRose {
                 }
             }
 
-            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+            if (!items[i].isTargetName("Sulfuras, Hand of Ragnaros")) {
                 items[i].expirationDate = items[i].expirationDate - 1;
             }
 
             if (items[i].expirationDate < 0) {
-                if (!items[i].name.equals("Aged Brie")) {
-                    if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+                if (!items[i].isTargetName("Aged Brie")) {
+                    if (!items[i].isTargetName("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items[i].price > 0) {
-                            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+                            if (!items[i].isTargetName("Sulfuras, Hand of Ragnaros")) {
                                 items[i].price = items[i].price - 1;
                             }
                         }
@@ -59,4 +59,5 @@ class GildedRose {
             }
         }
     }
+
 }

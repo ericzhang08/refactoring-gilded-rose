@@ -18,4 +18,8 @@ public class Item {
     public String toString() {
         return this.name + ", " + this.expirationDate + ", " + this.price;
     }
+
+    boolean isTargetName(String targetName) {
+        return name.equals(targetName);
+    }
 }
