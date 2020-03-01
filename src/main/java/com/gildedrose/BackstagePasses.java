@@ -22,7 +22,7 @@ public class BackstagePasses extends Item {
 
     @Override
     public void ThirdUpdateRule() {
-        price = price - price;
+        price = 0;
 
     }
 }
