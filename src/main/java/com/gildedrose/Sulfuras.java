@@ -10,13 +10,11 @@ public class Sulfuras extends Item {
     public boolean isSulfuras() {
         return true;
     }
-
     @Override
-    public void updateFirstStep() {
+    public void firstUpdateRule() {
     }
-
     @Override
-    public void updateSecondStep() {
+    public void secondUpdateRule() {
 
     }
 }

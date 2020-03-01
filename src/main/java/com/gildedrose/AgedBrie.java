@@ -11,14 +11,14 @@ public class AgedBrie extends Item {
     }
 
     @Override
-    public void updateFirstStep() {
+    public void firstUpdateRule() {
         if (price < 50) {
             price = price + 1;
         }
     }
 
     @Override
-    public void updateThirdStep() {
+    public void ThirdUpdateRule() {
         if (price < 50) {
             price = price + 1;
         }

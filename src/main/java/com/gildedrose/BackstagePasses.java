@@ -6,7 +6,7 @@ public class BackstagePasses extends Item {
     }
 
     @Override
-    public void updateFirstStep() {
+    public void firstUpdateRule() {
         if (price >= 50) return;
         price = price + 1;
 
@@ -21,7 +21,7 @@ public class BackstagePasses extends Item {
     }
 
     @Override
-    public void updateThirdStep() {
+    public void ThirdUpdateRule() {
         price = price - price;
 
     }

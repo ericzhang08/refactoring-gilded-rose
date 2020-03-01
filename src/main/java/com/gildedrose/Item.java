@@ -32,14 +32,25 @@ public class Item {
     }
 
     void updatePrice() {
-        updateFirstStep();
-        updateSecondStep();
+        firstUpdateRule();
+        secondUpdateRule();
         if (expirationDate < 0) {
-            updateThirdStep();
+            ThirdUpdateRule();
         }
     }
 
-    public void updateThirdStep() {
+    public void firstUpdateRule() {
+        if (price > 0) {
+            price = price - 1;
+        }
+    }
+
+    public void secondUpdateRule() {
+        expirationDate = expirationDate - 1;
+    }
+
+
+    public void ThirdUpdateRule() {
         if (price > 0) {
             if (!isSulfuras()) {
                 price = price - 1;
@@ -48,14 +59,7 @@ public class Item {
 
     }
 
-    public void updateSecondStep() {
-        expirationDate = expirationDate - 1;
-    }
 
-    public void updateFirstStep() {
-        if (price > 0) {
-            price = price - 1;
-        }
-    }
+
 
 }
