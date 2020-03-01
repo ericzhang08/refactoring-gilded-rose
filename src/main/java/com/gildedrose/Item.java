@@ -42,16 +42,14 @@ public class Item {
 
     public void updateThirdStep() {
 
-            if (!isBackstagePasses()) {
-                if (price > 0) {
-                    if (!isSulfuras()) {
-                        price = price - 1;
-                    }
-                }
-            } else {
-                price = price - price;
+        if (price > 0) {
+            if (!isSulfuras()) {
+                price = price - 1;
             }
+
         }
+
+    }
 
     public void updateSecondStep() {
         expirationDate = expirationDate - 1;

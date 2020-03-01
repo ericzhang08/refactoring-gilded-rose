@@ -25,6 +25,12 @@ public class BackstagePasses extends Item {
     }
 
     @Override
+    public void updateThirdStep() {
+        price = price - price;
+
+    }
+
+    @Override
     public boolean isBackstagePasses() {
         return true;
     }
