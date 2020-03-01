@@ -33,4 +33,54 @@ public class Item {
     boolean isAgedBrie() {
         return itemType.isAgedBrie();
     }
+
+    void updatePrice() {
+        if (isAgedBrie() || isBackstagePasses()) {
+            if (price < 50) {
+                price = price + 1;
+
+                if (isBackstagePasses()) {
+                    if (expirationDate < 11) {
+                        if (price < 50) {
+                            price = price + 1;
+                        }
+                    }
+
+                    if (expirationDate < 6) {
+                        if (price < 50) {
+                            price = price + 1;
+                        }
+                    }
+                }
+            }
+        } else {
+            if (!isSulfuras()) {
+                if (price > 0) {
+                    price = price - 1;
+                }
+            }
+        }
+
+        if (!isSulfuras()) {
+            expirationDate = expirationDate - 1;
+        }
+
+        if (expirationDate < 0) {
+            if (!isAgedBrie()) {
+                if (!isBackstagePasses()) {
+                    if (price > 0) {
+                        if (!isSulfuras()) {
+                            price = price - 1;
+                        }
+                    }
+                } else {
+                    price = price - price;
+                }
+            } else {
+                if (price < 50) {
+                    price = price + 1;
+                }
+            }
+        }
+    }
 }
