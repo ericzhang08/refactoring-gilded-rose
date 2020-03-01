@@ -19,19 +19,15 @@ public class Item {
         return this.name + ", " + this.expirationDate + ", " + this.price;
     }
 
-    boolean isTargetName(String targetName) {
-        return name.equals(targetName);
-    }
-
     boolean isBackstagePasses() {
-        return isTargetName("Backstage passes to a TAFKAL80ETC concert");
+        return name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
 
     boolean isSulfuras() {
-        return isTargetName("Sulfuras, Hand of Ragnaros");
+        return name.equals("Sulfuras, Hand of Ragnaros");
     }
 
     boolean isAged_brie() {
-        return isTargetName("Aged Brie");
+        return name.equals("Aged Brie");
     }
 }
