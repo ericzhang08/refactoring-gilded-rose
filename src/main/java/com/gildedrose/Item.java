@@ -8,7 +8,7 @@ public class Item {
 
     public int price;
 
-     Item(String name, int expirationDate, int price) {
+    Item(String name, int expirationDate, int price) {
         this.name = name;
         this.expirationDate = expirationDate;
         this.price = price;
@@ -32,31 +32,7 @@ public class Item {
     }
 
     void updatePrice() {
-        if (isAgedBrie() || isBackstagePasses()) {
-            if (price < 50) {
-                price = price + 1;
-
-                if (isBackstagePasses()) {
-                    if (expirationDate < 11) {
-                        if (price < 50) {
-                            price = price + 1;
-                        }
-                    }
-
-                    if (expirationDate < 6) {
-                        if (price < 50) {
-                            price = price + 1;
-                        }
-                    }
-                }
-            }
-        } else {
-            if (!isSulfuras()) {
-                if (price > 0) {
-                    price = price - 1;
-                }
-            }
-        }
+        updateFirstStep();
 
         if (!isSulfuras()) {
             expirationDate = expirationDate - 1;
@@ -80,4 +56,11 @@ public class Item {
             }
         }
     }
+
+    public void updateFirstStep() {
+        if (price > 0) {
+            price = price - 1;
+        }
+    }
+
 }

@@ -9,4 +9,11 @@ public class AgedBrie extends Item {
     public boolean isAgedBrie() {
         return true;
     }
+
+    @Override
+    public void updateFirstStep() {
+        if (price < 50) {
+            price = price + 1;
+        }
+    }
 }
