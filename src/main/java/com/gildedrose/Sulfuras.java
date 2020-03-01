@@ -7,14 +7,6 @@ public class Sulfuras extends Item {
     }
 
     @Override
-    public void firstUpdateRule() {
-    }
-    @Override
-    public void secondUpdateRule() {
-
-    }
-    @Override
-    public void ThirdUpdateRule() {
-
+    void updatePrice() {
     }
 }

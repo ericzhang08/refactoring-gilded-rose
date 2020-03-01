@@ -18,13 +18,11 @@ public class Item {
     public String toString() {
         return this.name + ", " + this.expirationDate + ", " + this.price;
     }
-
+    //todo 这里有疑问，这几个函数应该如何命名
     void updatePrice() {
         firstUpdateRule();
         secondUpdateRule();
-        if (expirationDate < 0) {
-            ThirdUpdateRule();
-        }
+        ThirdUpdateRule();
     }
 
     public void firstUpdateRule() {
@@ -39,10 +37,9 @@ public class Item {
 
 
     public void ThirdUpdateRule() {
-        if (price > 0) {
-            price = price - 1;
+        if (expirationDate >= 0 || price <= 0) return;
 
-        }
+        price = price - 1;
 
     }
 

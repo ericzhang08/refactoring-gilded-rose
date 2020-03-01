@@ -22,7 +22,9 @@ public class BackstagePasses extends Item {
 
     @Override
     public void ThirdUpdateRule() {
-        price = 0;
+        if (expirationDate < 0) {
+            price = 0;
+        }
 
     }
 }

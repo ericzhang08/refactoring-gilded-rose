@@ -14,8 +14,7 @@ public class AgedBrie extends Item {
 
     @Override
     public void ThirdUpdateRule() {
-        if (price < 50) {
-            price = price + 1;
-        }
+        if (expirationDate >= 0 || price >= 50) return;
+        price = price + 1;
     }
 }
