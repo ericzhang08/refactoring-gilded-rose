@@ -4,18 +4,18 @@ public class Item {
 
     public String name;
 
-    public int sell_in;
+    public int expirationDate;
 
-    public int quality;
+    public int price;
 
-    public Item(String name, int sell_in, int quality) {
+    public Item(String name, int expirationDate, int price) {
         this.name = name;
-        this.sell_in = sell_in;
-        this.quality = quality;
+        this.expirationDate = expirationDate;
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return this.name + ", " + this.sell_in + ", " + this.quality;
+        return this.name + ", " + this.expirationDate + ", " + this.price;
     }
 }

@@ -13,8 +13,8 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.update_quality();
         assertEquals("foo", app.items[0].name);
-        assertThat(app.items[0].quality, is(4));
-        assertThat(app.items[0].sell_in, is(0));
+        assertThat(app.items[0].price, is(4));
+        assertThat(app.items[0].expirationDate, is(0));
     }
 
 }
