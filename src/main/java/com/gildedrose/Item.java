@@ -7,14 +7,11 @@ public class Item {
     public int expirationDate;
 
     public int price;
-    private ItemType itemType;
 
-    public Item(String name, int expirationDate, int price) {
+     Item(String name, int expirationDate, int price) {
         this.name = name;
         this.expirationDate = expirationDate;
         this.price = price;
-        this.itemType = ItemTypeFactory.create(name);
-
     }
 
     @Override
@@ -23,15 +20,15 @@ public class Item {
     }
 
     boolean isBackstagePasses() {
-        return itemType.isBackstagePasses();
+        return false;
     }
 
     boolean isSulfuras() {
-        return itemType.isSulfuras();
+        return false;
     }
 
     boolean isAgedBrie() {
-        return itemType.isAgedBrie();
+        return false;
     }
 
     void updatePrice() {

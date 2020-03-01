@@ -1,6 +1,10 @@
 package com.gildedrose;
 
-public class Sulfuras extends ItemType {
+public class Sulfuras extends Item {
+    public Sulfuras(String name, int expirationDate, int price) {
+        super(name, expirationDate, price);
+    }
+
     @Override
     public boolean isSulfuras() {
         return true;
