@@ -6,11 +6,6 @@ public class AgedBrie extends Item {
     }
 
     @Override
-    public boolean isAgedBrie() {
-        return true;
-    }
-
-    @Override
     public void firstUpdateRule() {
         if (price < 50) {
             price = price + 1;

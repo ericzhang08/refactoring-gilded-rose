@@ -25,9 +25,4 @@ public class BackstagePasses extends Item {
         price = price - price;
 
     }
-
-    @Override
-    public boolean isBackstagePasses() {
-        return true;
-    }
 }

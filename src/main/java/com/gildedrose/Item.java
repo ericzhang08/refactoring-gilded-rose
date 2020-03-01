@@ -19,18 +19,6 @@ public class Item {
         return this.name + ", " + this.expirationDate + ", " + this.price;
     }
 
-    boolean isBackstagePasses() {
-        return false;
-    }
-
-    boolean isSulfuras() {
-        return false;
-    }
-
-    boolean isAgedBrie() {
-        return false;
-    }
-
     void updatePrice() {
         firstUpdateRule();
         secondUpdateRule();
@@ -52,14 +40,11 @@ public class Item {
 
     public void ThirdUpdateRule() {
         if (price > 0) {
-            if (!isSulfuras()) {
-                price = price - 1;
-            }
+            price = price - 1;
+
         }
 
     }
-
-
 
 
 }
