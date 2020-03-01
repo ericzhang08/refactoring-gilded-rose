@@ -7,21 +7,17 @@ public class BackstagePasses extends Item {
 
     @Override
     public void updateFirstStep() {
-        if (price < 50) {
-            price = price + 1;
-            if (expirationDate < 11) {
-                if (price < 50) {
-                    price = price + 1;
-                }
-            }
-            if (expirationDate < 6) {
-                if (price < 50) {
-                    price = price + 1;
-                }
-            }
+        if (price >= 50) return;
+        price = price + 1;
 
+        if (expirationDate < 11 && price < 50) {
+            price = price + 1;
         }
 
+        if (expirationDate < 6 && price < 50) {
+            price = price + 1;
+
+        }
     }
 
     @Override
