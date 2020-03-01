@@ -22,4 +22,16 @@ public class Item {
     boolean isTargetName(String targetName) {
         return name.equals(targetName);
     }
+
+    boolean isBackstagePasses() {
+        return isTargetName("Backstage passes to a TAFKAL80ETC concert");
+    }
+
+    boolean isSulfuras() {
+        return isTargetName("Sulfuras, Hand of Ragnaros");
+    }
+
+    boolean isAged_brie() {
+        return isTargetName("Aged Brie");
+    }
 }
