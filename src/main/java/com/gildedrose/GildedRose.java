@@ -9,7 +9,7 @@ class GildedRose {
 
     public void update_quality() {
         for (Item item : items) {
-            if (!item.isAged_brie() && !item.isBackstagePasses()) {
+            if (!item.isAgedBrie() && !item.isBackstagePasses()) {
                 if (item.price > 0) {
                     if (!item.isSulfuras()) {
                         item.price = item.price - 1;
@@ -40,7 +40,7 @@ class GildedRose {
             }
 
             if (item.expirationDate < 0) {
-                if (!item.isAged_brie()) {
+                if (!item.isAgedBrie()) {
                     if (!item.isBackstagePasses()) {
                         if (item.price > 0) {
                             if (!item.isSulfuras()) {

@@ -7,11 +7,14 @@ public class Item {
     public int expirationDate;
 
     public int price;
+    private ItemType itemType;
 
     public Item(String name, int expirationDate, int price) {
         this.name = name;
         this.expirationDate = expirationDate;
         this.price = price;
+        this.itemType = ItemTypeFactory.create(name);
+
     }
 
     @Override
@@ -20,14 +23,14 @@ public class Item {
     }
 
     boolean isBackstagePasses() {
-        return name.equals("Backstage passes to a TAFKAL80ETC concert");
+        return itemType.isBackstagePasses();
     }
 
     boolean isSulfuras() {
-        return name.equals("Sulfuras, Hand of Ragnaros");
+        return itemType.isSulfuras();
     }
 
-    boolean isAged_brie() {
-        return name.equals("Aged Brie");
+    boolean isAgedBrie() {
+        return itemType.isAgedBrie();
     }
 }
