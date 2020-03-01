@@ -33,28 +33,28 @@ public class Item {
 
     void updatePrice() {
         updateFirstStep();
-
-        if (!isSulfuras()) {
-            expirationDate = expirationDate - 1;
-        }
+        updateSecondStep();
 
         if (expirationDate < 0) {
-            if (!isAgedBrie()) {
-                if (!isBackstagePasses()) {
-                    if (price > 0) {
-                        if (!isSulfuras()) {
-                            price = price - 1;
-                        }
+            updateThirdStep();
+        }
+    }
+
+    public void updateThirdStep() {
+
+            if (!isBackstagePasses()) {
+                if (price > 0) {
+                    if (!isSulfuras()) {
+                        price = price - 1;
                     }
-                } else {
-                    price = price - price;
                 }
             } else {
-                if (price < 50) {
-                    price = price + 1;
-                }
+                price = price - price;
             }
         }
+
+    public void updateSecondStep() {
+        expirationDate = expirationDate - 1;
     }
 
     public void updateFirstStep() {

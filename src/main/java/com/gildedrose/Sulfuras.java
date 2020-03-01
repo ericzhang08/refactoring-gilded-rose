@@ -5,6 +5,11 @@ public class Sulfuras extends Item {
     public void updateFirstStep() {
     }
 
+    @Override
+    public void updateSecondStep() {
+
+    }
+
     public Sulfuras(String name, int expirationDate, int price) {
         super(name, expirationDate, price);
     }

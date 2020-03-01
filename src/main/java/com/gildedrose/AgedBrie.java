@@ -16,4 +16,11 @@ public class AgedBrie extends Item {
             price = price + 1;
         }
     }
+
+    @Override
+    public void updateThirdStep() {
+        if (price < 50) {
+            price = price + 1;
+        }
+    }
 }
